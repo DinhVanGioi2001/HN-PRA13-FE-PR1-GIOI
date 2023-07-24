@@ -1,0 +1,101 @@
+header .header__button-icon:hover,
+header .header__button:hover {
+  background-color: #f5bd10;
+}
+header .header__button {
+  border-right: 1px solid gainsboro;
+}
+header .header__button a {
+  text-decoration: none;
+}
+header .header__button:first-child {
+  border-left: 1px solid gainsboro;
+}
+header .header__button-icon:first-child {
+  background-color: #f5bd10;
+}
+header .header__logo-hotline .header__logo-hotline-title {
+  color: #f5bd10;
+}
+header .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+header .search__input {
+  font-size: 14px;
+  border: 1px solid #b4b4b4;
+  color: #646464;
+  padding: 0.7rem 1.2rem;
+  padding-right: 40px;
+  border-radius: 30px;
+  width: 15em;
+  transition: all ease-in-out 0.5s;
+}
+@media all and (max-width: 992px) {
+  header .search__input {
+    width: 20em;
+  }
+}
+header .search__input:hover, header .search__input:focus {
+  box-shadow: 0 0 1em rgba(253, 245, 245, 0.4235294118);
+}
+header .search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+header .search__button {
+  border: none;
+  position: absolute;
+  right: 13px;
+  top: 10px;
+}
+header .search__button:hover {
+  cursor: pointer;
+}
+header .nav__container {
+  background-color: #202020;
+}
+header .nav__container .nav__list {
+  border-right: 1px solid rgb(75, 72, 72);
+}
+header .nav__container .nav__list:first-child, header .nav__container .nav__list:hover {
+  background-color: #f5bd10;
+}
+header .nav__container .nav__list:first-child {
+  border-left: 1px solid rgb(75, 72, 72);
+}
+@media all and (max-width: 992px) {
+  header .nav__container .nav__list {
+    border: none;
+  }
+}
+header .nav-cart {
+  border-left: 1px solid rgb(75, 72, 72);
+  border-right: 1px solid rgb(75, 72, 72);
+  position: relative;
+}
+header .nav-cart svg {
+  color: white;
+}
+header .nav-cart .cart_count {
+  position: absolute;
+  top: 7px;
+  right: 4px;
+  background-color: #f5bd10;
+}
+
+.banner .banner__container {
+  transition: all 0.4s;
+}
+.banner .banner__container:hover {
+  background-color: #f5bd10;
+}
+.banner .banner__container:hover .icon-image {
+  filter: brightness(0) invert(1);
+}
+.banner .banner__container:hover .banner__content {
+  color: #ffffff;
+}

@@ -1,0 +1,93 @@
+- var description_footer = "Công ty Cổ phẩn Công nghệ DKT đã và đang  khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử"
+
+- var connect = [ { icon: 'facebook-f.svg', title: 'Facebook' }, { icon: 'twitter.svg', title: 'Twitter' }, { icon: '../../../assets/images/svg/google-plus-g.svg', title: 'Google' }, { icon: '../../../assets/images/svg/skype.svg', title: 'Skype' }, { icon: 'instagram.svg', title: 'Instagram' } ];
+
+
+mixin list(title, h, c, ...items)
+  h6.text-uppercase.fw-bold.mb-4.text-dark.d-flex.justify-content-start.align-items-center
+    img.pe-2(src="../../../assets/images/svg/grid-fill.svg" alt=`${title}`)
+    span= title
+  each item in items
+    p
+      a.text-decoration-none(href=h, class=c)= item
+
+footer.text-lg-start.bg-light.text-muted.pt-5.mb-4
+  .container.text-md-start
+    .row.mt-3
+      .col-md-7.col-lg-6.col-xl-4.col-xxl-3.mx-auto.mb-4
+        a.text-decoration-none(href="/")
+          h6.text-uppercase.fw-bold.mb-4.text-dark.d-flex.justify-content-start.align-items-center
+            img.pe-2(src="../../../assets/images/svg/grid-fill.svg" alt="Về chúng tôi")
+            span Về chúng tôi
+        p.mt-3= description_footer
+        p.me-5
+          i.fas.fa-home.me-2
+          | Tầng 4 - Toà nhà Hanoi Group   
+          span.ms-4 442 Đội Cấn Ba Đình - Hà Nội
+        p
+          i.fas.fa-phone.me-2
+          | (04) 9500 9650 - (04) 9500 8850
+        p
+          i.fas.fa-print.me-2
+          | support@dkt.com.vn
+      .col-md-4.col-lg-3.col-xl-2.col-xxl-2.mx-auto.mb-4
+        +list('Chính sách', '#', 'text-reset', 'Chính sách giao hàng', 'Chính sách đổi sản phẩm', 'Chính sách bảo hành', 'Chính sách trả góp', 'Giới thiệu hàng đổi trả', 'Vận chuyển miễn phí')
+
+      .col-md-4.col-lg-3.col-xl-2.col-xxl-2.mx-auto.mb-4
+        +list('Dịch vụ & hỗ trợ', '#', 'text-reset', 'Hệ thống cửa hàng', 'Hướng dẫn mua hàng', 'Tích điểm đổi thưởng', 'Dịch vụ đổi trả hàng', 'Câu hỏi thường gặp')
+
+      .col-md-4.col-lg-6.col-xl-2.col-xxl-2.mx-auto.mb-4
+        +list('Tin tức - sự kiện', '#', 'text-reset', 'Tin tức mới nhất', 'Tin tức khuyến mãi', 'Tuyển dụng, đãi ngộ', 'Download tài liệu', 'Chương trình đối tác', 'Nhà phát triển ứng dụng')
+
+      .col-md-4.col-lg-6.col-xl-2.col-xxl-2.mx-auto.mb-4
+        a.text-decoration-none(href="/")
+          h6.text-uppercase.fw-bold.mb-4.text-dark.d-flex.justify-content-start.align-items-center
+            img.pe-2(src="../../../assets/images/svg/grid-fill.svg")
+            span Kết nối
+        each val in connect
+          p.me-5
+            a.text-decoration-none.text-dark(href="#") 
+              img.pe-2(src=`../../../assets/images/svg/${val.icon}` alt=`${val.title}`)
+              = val.title
+
+    .container
+      .row 
+        .col-md-6
+          p Thanh toán 
+          .container.p-0.pe-5
+            .row 
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/techbank.png" alt="techcombank")
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/viettinbank.png" alt="viettinbank")
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/vpbank.png" alt="vpbank")
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/tienphongbank.png" alt="tienphongbank")
+            .row.p-1.px-0
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/maritimebank.png" alt="maritimebank")
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/dongabank.png" alt="dongabank")
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/asbank.png" alt="asbank")
+              .col-3.p-1 
+                img.w-100(src="../../../assets/images/png/vietcapitalbank.png" alt="vietcapitalbank")
+
+        .col-md-6
+          p Giải đáp nhanh 
+          .d-flex.justify-content-around.flex-xl-row.flex-column
+            .d-flex.mb-3
+              .p-3.px-3.rounded-circle.border.border-warning.d-flex.align-items-center
+                img(src="../../../assets/images/svg/telephone-fill.svg" alt="" srcset="")
+              .ps-3.text-center
+                p.mb-0 Tư vấn miễn phí (24/7)
+                p.mb-0.text-danger.fw-bold.fs-5 1900 650 650
+            .d-flex.mb-3
+              .p-3.px-3.rounded-circle.border.border-warning.d-flex.align-items-center
+                img(src="../../../assets/images/svg/chat-dots-fill.svg" alt="" srcset="")
+              .ps-3.text-center
+                p.mb-0 Góp ý - phản hồi - thắc mắc
+                p.mb-0.text-danger.fw-bold.fs-5 1900 650 650
+
+

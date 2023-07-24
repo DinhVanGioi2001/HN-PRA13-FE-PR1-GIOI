@@ -1,0 +1,14 @@
+.banner {
+  .banner__container {
+    transition: all 0.4s;
+    &:hover {
+      background-color: $primary-color;
+      .icon-image {
+        filter: brightness(0) invert(1);
+      }
+      .banner__content {
+        color: $white-color;
+      }
+    }
+  }
+}
