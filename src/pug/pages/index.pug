@@ -1,7 +1,11 @@
 extends ../layouts/default-layout.pug
 
 block head 
-  title Homepage
+  - var title = "Homepage"
+  title=title
+
 block content 
+  include ../components/homepage/banner.pug
+
   section   
-    include ../components/homepage/banner.pug
+    +banner
