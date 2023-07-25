@@ -36,9 +36,9 @@ header.header
       .header__logo-hotline.pe-5.d-lg-block.d-none
         .header__logo-hotline-title.fw-bold.text-uppercase Đặt hàng nhanh :
         a.text-decoration-none.text-dark(href='#') (04) 9500 9650 - (04) 9500 8850
-      .search
+      form.search(action="#" method="post") 
         input.search__input(type="text" placeholder="Tìm kiếm...")
-        .search__button
+        .search__button(type="submit")
           include ../../../assets/images/svg/magnifying-glass-solid.svg
 
 

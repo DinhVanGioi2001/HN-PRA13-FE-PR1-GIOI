@@ -6,6 +6,26 @@ block head
 
 block content 
   include ../components/homepage/banner.pug
+  include ../components/homepage/featured-products.pug
+  include ../components/homepage/latest-products.pug
+  include ../components/homepage/selling-products.pug
+  include ../components/homepage/new-products.pug
+  include ../components/homepage/repost-page.pug
 
   section   
     +banner
+
+  section
+    +featured
+
+  section 
+    +latest
+
+  section
+    +selling
+
+  section 
+    +new
+
+  section 
+    +repost
