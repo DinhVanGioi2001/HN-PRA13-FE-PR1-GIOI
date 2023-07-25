@@ -1,12 +1,12 @@
-header {
-  .header__button-icon,
-  .header__button {
+.header {
+  &__button__icon,
+  &__button {
     &:hover {
       background-color: $primary-color;
     }
   }
 
-  .header__button {
+  &__button {
     border-right: 1px solid gainsboro;
 
     a {
@@ -18,7 +18,7 @@ header {
     }
   }
 
-  .header__button-icon {
+  &__button__icon {
     &:first-child {
       background-color: $primary-color;
     }
@@ -31,9 +31,7 @@ header {
   }
 
   .search {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include d-flex-center;
     text-align: center;
     position: relative;
   }

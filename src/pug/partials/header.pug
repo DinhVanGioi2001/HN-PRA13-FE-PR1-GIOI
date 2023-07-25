@@ -1,20 +1,23 @@
-header
+- const headerButtons = [ { href: '#', alt: 'Facebook', iconPath: '../../../assets/images/svg/facebook-f.svg' }, { href: '#', alt: 'Google Plus', iconPath: '../../../assets/images/svg/google-plus-g.svg' }, { href: '#', alt: 'Instagram', iconPath: '../../../assets/images/svg/instagram.svg' }, { href: '#', alt: 'Twitter', iconPath: '../../../assets/images/svg/twitter.svg' } ]
+- const navItems = [ { href: '/', text: 'Trang chủ' }, { href: '#', text: 'Giới thiệu' }, { href: '#', text: 'Sản phẩm' }, { href: '#', text: 'Tin khuyến mãi' }, { href: '#', text: 'Dịch vụ' }, { href: '#', text: 'Liên hệ' } ]
+
+mixin headerButtonLink(href, alt, iconPath)
+  .header__button.header__button__icon.p-2
+    a(href=href)
+      img(src=iconPath, alt=alt)
+
+mixin navItemLink(href, text)
+  li.nav-item.nav__list
+    a.nav-link.link-light.text-light.p-4.text-uppercase(href=href)= text
+
+
+header.header
   .bg-light
     .container
       .d-flex.justify-content-between.align-items-center
         .d-md-flex.justify-content-between.align-items-center.d-none
-          .header__button.header__button-icon.p-2
-            a(href='#')
-              include ../../../assets/images/svg/facebook-f.svg
-          .header__button.header__button-icon.p-2
-            a(href='#')
-              include ../../../assets/images/svg/google-plus-g.svg
-          .header__button.header__button-icon.p-2
-            a(href='#')
-              include ../../../assets/images/svg/instagram.svg
-          .header__button.header__button-icon.p-2
-            a(href='#')
-              include ../../../assets/images/svg/twitter.svg
+          each headerButton in headerButtons
+            +headerButtonLink(headerButton.href, headerButton.alt, headerButton.iconPath)
 
         .d-flex.mx-md-0.mx-auto
           .header__button.p-2.px-3
@@ -53,23 +56,11 @@ header
 
       .collapse.navbar-collapse#navbarCollapse.justify-content-start.justify-content-lg-start
         ul.navbar-nav.mr-auto.mb-0.text-center.text-lg-left
-          li.nav-item.nav__list
-            a.nav-link.link-light.text-light.p-4.text-uppercase(href='/') Trang chủ
-          li.nav-item.nav__list
-            a.nav-link.link-light.text-light.p-4.text-uppercase(href='#') Giới thiệu
-          li.nav-item.nav__list
-            a.nav-link.link-light.text-light.p-4.text-uppercase(href='#') Sản phẩm
-          li.nav-item.nav__list
-            a.nav-link.link-light.text-light.p-4.text-uppercase(href='#') Tin khuyến mại
-          li.nav-item.nav__list
-            a.nav-link.link-light.text-light.p-4.text-uppercase(href='#') Dịch vụ
-          li.nav-item.nav__list
-            a.nav-link.link-light.text-light.p-4.text-uppercase(href='#') Liên hệ
+          each item in navItems
+            +navItemLink(item.href, item.text)
 
       .nav-cart.p-4.d-lg-block.d-none
         a(href='#')
           svg(width='25' fill='currentColor' class='bi bi-cart-dash-fill' viewBox='0 0 16 16')
             path(d='M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z')
           .cart_count.rounded-circle.p-1.px-2.text-light 00
-
-

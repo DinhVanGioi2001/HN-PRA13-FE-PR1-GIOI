@@ -1,5 +1,5 @@
 .banner {
-  .banner__container {
+  &__container {
     transition: all 0.4s;
     &:hover {
       background-color: $primary-color;
