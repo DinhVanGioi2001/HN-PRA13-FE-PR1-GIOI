@@ -1,0 +1,6 @@
+mixin categoryList()
+  .category__list.border-bottom.mt-4
+    each category in category_list
+      p.category__list-item.p-3.text-dark.border.border-bottom-0.m-0.d-flex.align-items-center
+        img.category__list-icon.pe-2(src="../../../assets/images/svg/grid-fill.svg" alt=`${title}`)
+        span= category

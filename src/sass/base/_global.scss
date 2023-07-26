@@ -1,0 +1,48 @@
+.product__type {
+  .previous,
+  .next {
+    background-color: #a5a1a1;
+    color: rgb(5, 5, 5);
+
+    &:hover {
+      background-color: $primary-color;
+      color: black;
+    }
+  }
+}
+
+.category__list {
+  .category__list-item {
+    cursor: pointer;
+    .category__list-icon {
+      filter: contrast(0);
+    }
+    &:hover {
+      .category__list-icon {
+        filter: none;
+      }
+      background-color: #000;
+      color: $primary-color !important;
+    }
+  }
+}
+
+.product__card {
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+
+  .double__button {
+    position: absolute;
+    bottom: 1%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  &:hover {
+    .double__button {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
