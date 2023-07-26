@@ -9,4 +9,4 @@ mixin productCard(price, title, image)
         each index in [1, 2, 3, 4, 5]
           img.me-1(src="../../../assets/images/svg/star-fill.svg" alt="star")
         | (12 đánh giá)
-    +doubleButton('Mua ngay', 'Xem chi tiết')
+    +doubleButton([{href: '#', title: 'Mua ngay'}, {href: '#', title: 'Xem chi tiết'}])

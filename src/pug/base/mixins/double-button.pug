@@ -1,4 +1,6 @@
-mixin doubleButton(buy, detail)
+mixin doubleButton(button)
   .double__button.mb-2
-    a.fs-6.btn.btn-warning.text-light.text-uppercase(href="#")= buy
-    a.fs-6.btn.btn-secondary.text-.text-uppercase.ms-3(href="#")= detail
+    if button[0].title !== ''
+      a.p-2.double__button__text.btn.btn-warning.text-light.text-uppercase(href=button[0].href)= button[0].title
+    if button[1].title !== ''
+      a.p-2.double__button__text.btn.btn-dark.text-.text-uppercase.ms-3(href=button[1].href)= button[1].title

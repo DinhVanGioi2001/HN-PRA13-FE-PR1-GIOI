@@ -10,4 +10,4 @@ mixin horizontalProduct(price, image, title, content)
       p=content
       p.px-0.text-danger.fw-bold=price
         span Đ
-      +doubleButton('Mua ngay', 'Xem chi tiết')
+      +doubleButton([{href: '#', title: 'Mua ngay'}, {href: '#', title: 'Xem chi tiết'}])

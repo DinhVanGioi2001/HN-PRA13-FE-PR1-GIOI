@@ -46,3 +46,25 @@
     }
   }
 }
+
+.double__button__text {
+  font-size: 13px;
+  &:first-child() {
+    background-color: $primary-color !important;
+  }
+}
+
+.breadcrumb {
+  a {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  li:not(:first-child) {
+    &::before {
+      content: var(--bs-breadcrumb-divider, "»") !important;
+    }
+  }
+}
