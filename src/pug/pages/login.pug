@@ -20,11 +20,12 @@ block content
               label.ms-2.form-check-label(for="flexCheckChecked") Ghi nhớ đăng nhập 
 
             a.text-warning(href="/login.html") Bạn quên mật khẩu?
-
-          button.p-3.mb-4.double__button__text.btn.btn-dark.text-light.text-uppercase(type="submit") Đăng nhập
+          .button.mb-4
+            +button('Đăng nhập', '/login.html', 'btn-dark')
 
 
       .col-sm-6 
         h2.fs-4 Bạn chưa có tài khoản?
         p.mt-4.mb-4.fs-6 Đăng kí tài khoản để mua hàng nhanh hơn. Theo dõi đơn đặt hàng, vận chuyển. Cập nhật các tin tức sự kiện và các chương trình giảm giá của chúng tôi
-        a.p-3.double__button__text.btn.btn-warning.text-light.text-uppercase(href="/register.html") Đăng ký
+        .button.mb-4
+          +button('Đăng ký', '/register.html', 'btn-warning')

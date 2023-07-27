@@ -29,5 +29,6 @@ block content
         each info in infoLogin
           .col-sm-6 
             +input([{label: info.label, id: info.id}])
-    .mt-4.mb-5
-      +doubleButton([{href: '/', title: 'Quay lại'}, {href: '/register.html', title: 'Đăng ký'}])
+    .mt-4.mb-5.button
+      each button in buttonsRegister
+        +button(button.text, button.link, button.class)

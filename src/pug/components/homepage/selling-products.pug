@@ -21,4 +21,6 @@ mixin selling
       .selling__rocket__detail.p-2.me-lg-5.me-0.d-flex.flex-column.jutify-content-center.align-items-center
         p.fw-bold.display-6= productSellingRocket.title
         p= productSellingRocket.content
-        +doubleButton([{href: '#', title: 'Mua ngay'}, {href: '#', title: 'Xem chi tiết'}])
+        .button
+          each button in buttonsDetail
+            +button(button.text, button.link, button.class)

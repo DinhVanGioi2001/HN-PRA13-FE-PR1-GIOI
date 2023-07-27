@@ -32,7 +32,7 @@
   cursor: pointer;
   position: relative;
 
-  .double__button {
+  .button {
     position: absolute;
     bottom: 1%;
     visibility: hidden;
@@ -40,17 +40,17 @@
     transition: opacity 0.5s ease-in-out;
   }
   &:hover {
-    .double__button {
+    .button {
       visibility: visible;
       opacity: 1;
     }
   }
 }
 
-.double__button__text {
+.button__text {
   font-size: 13px;
-  &:first-child() {
-    background-color: $primary-color !important;
+  &:not(:first-child) {
+    margin-left: 10px;
   }
 }
 
