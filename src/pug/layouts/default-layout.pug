@@ -23,14 +23,21 @@ html
 
     link(rel='stylesheet' href='./assets/css/styles.css')
   body
+    include ../base/variables/homepage.pug
+    include ../base/variables/category.pug
+
     include ../base/mixins/carousel.pug
     include ../base/mixins/breadcrumb.pug
+    include ../base/mixins/product-card.pug
+    include ../base/mixins/product-tag.pug
     include ../base/mixins/product-type.pug
     include ../base/mixins/category-list.pug
-    include ../base/mixins/product-card.pug
+    include ../base/mixins/category-color.pug
     include ../base/mixins/horizontal-product.pug
     include ../base/mixins/button.pug
     include ../base/mixins/input.pug
+    include ../base/mixins/paginations.pug
+    include ../base/mixins/select.pug
 
     include ../base/variables/login-register.pug
 
