@@ -10,4 +10,6 @@ mixin horizontalProduct(price, image, title, content)
       p=content
       p.px-0.text-danger.fw-bold=price
         span Đ
-      +doubleButton('Mua ngay', 'Xem chi tiết')
+      .button
+        each button in buttonsDetail
+          +button(button.text, button.link, button.class)

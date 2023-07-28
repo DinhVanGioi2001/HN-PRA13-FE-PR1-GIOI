@@ -32,7 +32,7 @@
   cursor: pointer;
   position: relative;
 
-  .double__button {
+  .button {
     position: absolute;
     bottom: 1%;
     visibility: hidden;
@@ -40,9 +40,31 @@
     transition: opacity 0.5s ease-in-out;
   }
   &:hover {
-    .double__button {
+    .button {
       visibility: visible;
       opacity: 1;
+    }
+  }
+}
+
+.button__text {
+  font-size: 13px;
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.breadcrumb {
+  a {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  li:not(:first-child) {
+    &::before {
+      content: var(--bs-breadcrumb-divider, "»") !important;
     }
   }
 }

@@ -21,7 +21,7 @@ mixin bankLogosRow(banks)
 
 footer.text-lg-start.bg-light.text-muted.pt-5.mb-4
   .container.text-md-start
-    .row.mt-3
+    .row.mt-3.border-bottom
       .col-md-7.col-lg-6.col-xl-4.col-xxl-3.mx-auto.mb-4
         a.text-decoration-none(href="/")
           h6.text-uppercase.fw-bold.mb-4.text-dark.d-flex.justify-content-start.align-items-center
@@ -58,7 +58,7 @@ footer.text-lg-start.bg-light.text-muted.pt-5.mb-4
               img.pe-2(src=`../../../assets/images/svg/${val.icon}` alt=`${val.title}`)
               = val.title
 
-    .container
+    .container.mt-3
       .row 
         .col-md-6
           p Thanh toán 
@@ -83,5 +83,3 @@ footer.text-lg-start.bg-light.text-muted.pt-5.mb-4
               .ps-3.text-center
                 p.mb-0 Góp ý - phản hồi - thắc mắc
                 p.mb-0.text-danger.fw-bold.fs-5 1900 650 650
-
-
