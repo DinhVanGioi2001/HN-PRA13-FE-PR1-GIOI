@@ -1,7 +1,8 @@
 mixin selectOption(title, options)
   .d-flex.text-center.align-items-center
-    label.me-2= title
-      |:
+    if title !== ""
+      label.me-2= title
+      | :
     select.form-select.form-select-lg.w-auto(aria-label=".form-select-lg example")
       each option, index in options
         if index === 0

@@ -31,12 +31,11 @@ block content
               +selectOption("Show", optionsShow)
           .d-flex.h-100
             ul.nav.nav-tabs#myTab(role="tablist")
-              li.nav-item(role="presentation")
-                button.nav-link.active#home-tab(data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true")
-                  img.nav__img(src="../../../assets/images/svg/list.svg" alt='list layout')
-              li.nav-item(role="presentation")
-                button.nav-link#profile-tab(data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false")
-                  img.nav__img(src="../../../assets/images/svg/grid-3x3-gap-fill.svg" alt='grid layout')
+              each tab in tabsCategory
+                li.nav-item(role="presentation")
+                  button.nav-link(
+                    class=tab.active ? 'active' : '', id=tab.id + '-tab', data-bs-toggle="tab", data-bs-target="#" + tab.id, type="button", role="tab", aria-controls=tab.id, aria-selected=tab.active)
+                    img.nav__img(src=tab.image, alt=tab.label)
         div(class="tab-content" id="myTabContent")
           div.tab-pane.fade.show.active#home(role="tabpanel" aria-labelledby="home-tab")
             each product in productCategory
