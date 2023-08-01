@@ -1,5 +1,5 @@
 - const headerButtons = [ { href: '#', alt: 'Facebook', iconPath: '../../../assets/images/svg/facebook-f.svg' }, { href: '#', alt: 'Google Plus', iconPath: '../../../assets/images/svg/google-plus-g.svg' }, { href: '#', alt: 'Instagram', iconPath: '../../../assets/images/svg/instagram.svg' }, { href: '#', alt: 'Twitter', iconPath: '../../../assets/images/svg/twitter.svg' } ]
-- const navItems = [ { href: '/', text: 'Trang chủ' }, { href: '#', text: 'Giới thiệu' }, { href: '#', text: 'Sản phẩm' }, { href: '#', text: 'Tin khuyến mãi' }, { href: '#', text: 'Dịch vụ' }, { href: '#', text: 'Liên hệ' } ]
+- const navItems = [ { href: '/', text: 'Trang chủ' }, { href: '/blog.html', text: 'Tin tức' }, { href: '/category.html', text: 'Sản phẩm' }, { href: '/404.html', text: '404 Page' }, { href: '#', text: 'Tin khuyến mãi' }, { href: '#', text: 'Dịch vụ' } ]
 
 mixin headerButtonLink(href, alt, iconPath)
   .header__button.header__button__icon.p-2
@@ -21,9 +21,9 @@ header.header
 
         .d-flex.mx-md-0.mx-auto
           .header__button.p-2.px-3
-            a.fw-bold.text-dark(href='register.html') Đăng ký
+            a.fw-bold.text-dark(href='/register.html') Đăng ký
           .header__button.p-2.px-3
-            a.fw-bold.text-dark(href='login.html') Đăng nhập
+            a.fw-bold.text-dark(href='/login.html') Đăng nhập
 
   .header__logo.container.d-flex.justify-content-between.align-items-center.p-.flex-md-row.flex-column
     a.navbar-brand(href='/')

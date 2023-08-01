@@ -81,3 +81,43 @@
     }
   }
 }
+
+.category__none {
+  &__item {
+    cursor: pointer;
+    .category__none__icon {
+      filter: contrast(0);
+    }
+    &:hover {
+      .category__none__icon {
+        filter: none;
+      }
+      background-color: #000;
+      color: $primary-color !important;
+    }
+  }
+}
+
+.comment {
+  &__image {
+    width: 150px !important;
+    height: 100% !important;
+  }
+
+  &__sub {
+    margin-left: 150px;
+  }
+
+  &__content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  @media all and (max-width: 576px) {
+    &__sub {
+      margin-left: 50px;
+    }
+  }
+}

@@ -18,7 +18,7 @@ block content
         .category__list.border-bottom.mt-4.shadow-sm
           p.category__list__item.p-3.text-dark.border.border-bottom-0.m-0.d-flex.align-items-center
             img.pe-2.category__gif(src='../../../assets/images/svg/gift-fill.svg' alt=`list`)
-            span Sản phẩm khuyến mại
+            span.fw-bold.text-uppercase Sản phẩm khuyến mại
           each product in productsFeaturedData
             +productTag(product.price, product.title, product.image)
 
