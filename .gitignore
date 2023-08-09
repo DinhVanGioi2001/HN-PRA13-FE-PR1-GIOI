@@ -5,5 +5,5 @@ npm-debug.log
 .env
 .DS_Store
 .vscode
-/assets/css
-*.html
+# /assets/css
+# *.html
